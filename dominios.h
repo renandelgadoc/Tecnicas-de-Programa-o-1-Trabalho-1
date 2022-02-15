@@ -1,5 +1,5 @@
 //
-// Created by Thiago on 09/02/2022.
+// Created by Thiago 200073303
 //
 
 #ifndef PROJETO_TRABALHO_1_DOMINIOS_H
@@ -35,7 +35,7 @@ inline Tipo Dominio::getValor() const{
 
 ----------------------------------------------------------------------- */
 
-class Duracao {
+class Duracao {  //200073303
     private:
         int valoresValidos[5] = {30,60,90,120,180};
         int valorDuracao;
@@ -45,11 +45,11 @@ class Duracao {
         int getDuracao() const;
 };
 
-inline int Duracao::getDuracao() const {
+inline int Duracao::getDuracao() const {  //200073303
     return valorDuracao;
 }
 
-class Endereco {
+class Endereco {  //200073303
     private:
         static const int minCaracteres = 0;
         static const int maxCaracteres = 20;
@@ -60,11 +60,11 @@ class Endereco {
         string getEndereco() const;
 };
 
-inline string Endereco::getEndereco() const {
+inline string Endereco::getEndereco() const {  //200073303
     return valorEndereco;
 }
 
-class Descricao {
+class Descricao {  //200073303
 private:
     static const int minCaracteres = 0;
     static const int maxCaracteres = 30;
@@ -75,11 +75,11 @@ public:
     string getDescricao() const;
 };
 
-inline string Descricao::getDescricao() const {
+inline string Descricao::getDescricao() const {  //200073303
     return valorDescricao;
 }
 
-class Titulo {
+class Titulo {  //200073303
 private:
     static const int minCaracteres = 5;
     static const int maxCaracteres = 20;
@@ -90,11 +90,11 @@ public:
     string getTitulo() const;
 };
 
-inline string Titulo::getTitulo() const {
+inline string Titulo::getTitulo() const {  //200073303
     return valorTitulo;
 }
 
-class Horario {
+class Horario {  //200073303
 private:
     static const int maxHoras = 23;
     static const int minHoras = 0;
@@ -107,11 +107,11 @@ public:
     string getHorario() const;
 };
 
-inline string Horario::getHorario() const {
+inline string Horario::getHorario() const {  //200073303
     return valorHorario;
 }
 
-class Data {
+class Data {  //200073303
 private:
     static const int minDiasTotal = 1;
     static const int maxDiasTotal = 31;
@@ -138,9 +138,107 @@ public:
     string getData() const;
 };
 
-inline string Data::getData() const {
+inline string Data::getData() const {  //200073303
     return valorData;
 }
 
+//
+// Created by Renan 200062743
+//
+
+using namespace std;
+
+class Cidade {   //200062743
+private:
+    string cidade;
+    string cidadesValidas[16] = {"Hong Kong", "Bangkok", "Macau", "Singapura",
+                                 "Londres","Paris", "Dubai", "Delhi",
+                                 "Istambul", "Kuala","Lumpur", "Nova Iorque",
+                                 "Antalya", "Mumbai", "Shenzhen", "Phuket"};
+    void validar(string);
+
+public:
+    void setValor(string);
+    string getValor() const;
+};
+
+inline string Cidade::getValor() const {   //200062743
+    return cidade;
+}
+
+//---------------------------------------------------------------------------------------------------------------
+
+class Idioma {   //200062743
+private:
+    string idioma;
+    string idiomasValidos[16] = {"Ingles", "Chines Mandarim", "Hindi",
+                                 "Espanhol", "Frances", "Arabe", "Bengali",
+                                 "Russo", "Portugues", "Indonesio"};
+    void validar(string);
+
+public:
+    void setValor(string);
+    string getValor() const;
+};
+
+inline string Idioma::getValor() const {   //200062743
+    return idioma;
+}
+
+class Senha {   //200062743
+private:
+    string senha;
+    void validar(string);
+
+public:
+    void setValor(string);
+    string getValor() const;
+
+};
+
+inline string Senha::getValor() const {   //200062743
+    return senha;
+}
+
+class Nome {   //200062743
+private:
+    string nome;
+    void validar(string);
+public:
+    void setValor(string);
+    string getValor() const;
+};
+
+inline string Nome::getValor() const {   //200062743
+    return nome;
+}
+
+class Nota {   //200062743
+private:
+    inline static float nota = 0;
+    inline static float numeroNotas = 0;
+    void validar(int);
+public:
+    void setValor(int);
+    float getValor() const;
+};
+
+inline float Nota::getValor() const {   //200062743
+    return nota;
+}
+
+class Email {   //200062743
+private:
+    string email;
+    void validar(string);
+public:
+
+    void setValor(string);
+    string getValor() const;
+};
+
+inline string Email::getValor() const {   //200062743
+    return email;
+}
 
 #endif //PROJETO_TRABALHO_1_DOMINIOS_H

@@ -1,5 +1,5 @@
 //
-// Created by Thiago on 09/02/2022.
+// Created by Thiago 200073303
 //
 
 #include <iostream>
@@ -28,57 +28,141 @@ int main() {
 
 -------------------------------------------------------------------------- */
 
-TUDuracao testeDuracao{};
+    TUDuracao testeDuracao{};
 
     switch (testeDuracao.run()) {
-        case TUDuracao::SUCESSO: cout << "SUCESSO - DURACAO" << endl;
+        case TUDuracao::SUCESSO:
+            cout << "SUCESSO - DURACAO" << endl;
             break;
-        case TUDuracao::FALHA: cout << "FALHA - DURACAO" << endl;
+        case TUDuracao::FALHA:
+            cout << "FALHA - DURACAO" << endl;
             break;
     }
 
-TUEndereco testeEndereco{};
+    TUEndereco testeEndereco{};
 
     switch (testeEndereco.run()) {
-        case TUEndereco::SUCESSO: cout << "SUCESSO - ENDERECO" << endl;
+        case TUEndereco::SUCESSO:
+            cout << "SUCESSO - ENDERECO" << endl;
             break;
-        case TUEndereco::FALHA: cout << "FALHA - ENDERECO" << endl;
+        case TUEndereco::FALHA:
+            cout << "FALHA - ENDERECO" << endl;
             break;
     }
 
-TUDescricao testeDescricao{};
+    TUDescricao testeDescricao{};
 
     switch (testeDescricao.run()) {
-        case TUDescricao::SUCESSO: cout << "SUCESSO - DESCRICAO" << endl;
+        case TUDescricao::SUCESSO:
+            cout << "SUCESSO - DESCRICAO" << endl;
             break;
-        case TUDescricao::FALHA: cout << "FALHA - DESCRICAO" << endl;
+        case TUDescricao::FALHA:
+            cout << "FALHA - DESCRICAO" << endl;
             break;
     }
 
-TUTitulo testeTitulo{};
+    TUTitulo testeTitulo{};
 
     switch (testeTitulo.run()) {
-        case TUTitulo::SUCESSO: cout << "SUCESSO - TITULO" << endl;
+        case TUTitulo::SUCESSO:
+            cout << "SUCESSO - TITULO" << endl;
             break;
-        case TUTitulo::FALHA: cout << "FALHA - TITULO" << endl;
+        case TUTitulo::FALHA:
+            cout << "FALHA - TITULO" << endl;
             break;
     }
 
-TUHorario testeHorario{};
+    TUHorario testeHorario{};
 
     switch (testeHorario.run()) {
-        case TUHorario::SUCESSO: cout << "SUCESSO - HORARIO" << endl;
+        case TUHorario::SUCESSO:
+            cout << "SUCESSO - HORARIO" << endl;
             break;
-        case TUHorario::FALHA: cout << "FALHA - HORARIO" << endl;
+        case TUHorario::FALHA:
+            cout << "FALHA - HORARIO" << endl;
             break;
     }
 
-TUData testeData{};
+    TUData testeData{};
 
     switch (testeData.run()) {
-        case TUData::SUCESSO: cout << "SUCESSO - DATA" << endl;
+        case TUData::SUCESSO:
+            cout << "SUCESSO - DATA" << endl;
             break;
-        case TUData::FALHA: cout << "FALHA - DATA" << endl;
+        case TUData::FALHA:
+            cout << "FALHA - DATA" << endl;
             break;
     }
+
+//
+// Created by Renan 200062743
+//
+
+    TUCidade testeA;
+
+    switch(testeA.run()){
+        case TUCidade::SUCESSO: cout << "SUCESSO - CIDADE" << endl;
+            break;
+        case TUCidade::FALHA  : cout << "FALHA   - CIDADE" << endl;
+            break;
+    }
+
+    //------------------------------------------------------------------------
+
+    TUIdioma testeB;
+
+    switch(testeA.run()){
+        case TUCidade::SUCESSO: cout << "SUCESSO - IDIOMA" << endl;
+            break;
+        case TUCidade::FALHA  : cout << "FALHA   - IDIOMA" << endl;
+            break;
+    }
+
+    //----------------------------------------------------------
+
+    TUSenha testeC;
+
+    switch(testeC.run()){
+        case TUCidade::SUCESSO: cout << "SUCESSO - SENHA" << endl;
+            break;
+        case TUCidade::FALHA  : cout << "FALHA   - SENHA" << endl;
+            break;
+    }
+
+    //-----------------------------------------------------
+
+    TUNome testeD;
+
+    switch(testeD.run()){
+        case TUCidade::SUCESSO: cout << "SUCESSO - NOME" << endl;
+            break;
+        case TUCidade::FALHA  : cout << "FALHA   - NOME" << endl;
+            break;
+    }
+
+//-------------------------------------------------------------------------
+
+    TUNota testeE;
+
+    switch(testeE.run()){
+        case TUCidade::SUCESSO: cout << "SUCESSO - NOTA" << endl;
+            break;
+        case TUCidade::FALHA  : cout << "FALHA   - NOTA" << endl;
+            break;
+    }
+
+//-----------------------------------------------------------------------------------
+
+    TUEmail testeF;
+
+    switch(testeF.run()){
+        case TUCidade::SUCESSO: cout << "SUCESSO - EMAIL" << endl;
+            break;
+        case TUCidade::FALHA  : cout << "FALHA   - EMAIL" << endl;
+            break;
+    }
+
+
+
 }
+
