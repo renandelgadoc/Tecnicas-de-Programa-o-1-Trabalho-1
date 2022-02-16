@@ -137,8 +137,8 @@ public:
 
 class TUCidade {   //200062743
 private:
-    inline const static string VALOR_VALIDO   = "Istambul";
-    inline const static string VALOR_INVALIDO = "Salvador";
+    const static string VALOR_VALIDO;
+    const static string VALOR_INVALIDO;
     Cidade *cidade;
     int estado;
     void setUp();
@@ -151,6 +151,9 @@ public:
     const static int FALHA   = -1;
     int run();
 };
+
+inline const string TUCidade::VALOR_VALIDO = "Istambul";
+inline const string TUCidade::VALOR_INVALIDO = "Salvador";
 
 class TUIdioma {   //200062743
 private:

@@ -375,3 +375,40 @@ void Email::setValor(string email) {   //200062743
     validar(email);
     this->email=email;
 }
+
+//--------------------------------------------------------------------
+
+bool Codigo::verificar(string codigo) {
+    for (const string &c : Codigo::codigosExistentes){
+        if (codigo == c) {
+            return false;
+        }
+    }
+    return true;
+}
+
+void Codigo::setValor() {
+    srand(Codigo::semente);
+    string codigo = "";
+    int randomNumber = 0;
+    int soma = 0;
+    for (int i= 0; i < 6; i++) {
+        randomNumber = (rand() % 10);
+        codigo += to_string(randomNumber) ;
+        soma+=randomNumber;
+    }
+    int digitoVerificador = soma % 9;
+    codigo += to_string(digitoVerificador);
+    Codigo::semente++;
+    if(verificar(codigo)){
+        Codigo::codigosExistentes[Codigo::semente - 1] = codigo;
+        this->codigo = codigo;
+    } else {
+        setValor();
+    }
+}
+
+Codigo::Codigo() {
+    setValor();
+}
+

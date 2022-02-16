@@ -6,8 +6,8 @@
 #define PROJETO_TRABALHO_1_DOMINIOS_H
 
 #include <stdexcept>
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdlib>
 #include <string>
 #include <iostream>
 #include <sstream>
@@ -215,7 +215,10 @@ inline string Nome::getValor() const {   //200062743
 
 class Nota {   //200062743
 private:
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
     inline static float nota = 0;
+#pragma clang diagnostic pop
     inline static float numeroNotas = 0;
     void validar(int);
 public:
@@ -240,5 +243,24 @@ public:
 inline string Email::getValor() const {   //200062743
     return email;
 }
+
+class Codigo {
+private:
+    string codigo;
+    static int semente;
+    inline static string codigosExistentes[100] = {};
+    bool verificar(string);
+public:
+    Codigo();
+    void setValor();
+    string getValor() const;
+};
+
+
+inline string Codigo::getValor() const {
+    return codigo;
+}
+
+inline int Codigo::semente = 1;
 
 #endif //PROJETO_TRABALHO_1_DOMINIOS_H
