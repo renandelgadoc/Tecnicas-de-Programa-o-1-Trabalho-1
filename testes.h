@@ -6,6 +6,7 @@
 #define PROJETO_TRABALHO_1_TESTES_H
 
 #include "dominios.h"
+#include "entidades.h"
 
 using namespace std;
 
@@ -295,5 +296,73 @@ public:
     const static int FALHA   = -1;
     int run();
 };
+
+class TUUsuario {
+private:
+    const string NOME_VALIDO = "Renan.";
+    const string EMAIL_VALIDO = "emaildorenan@elonmusk";
+    const string SENHA_VALIDA = "Ren4m9";
+    Usuario *usuario;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+public:
+    const static int SUCESSO = 1;
+    const static int FALHA = 0;
+    int run();
+};
+
+class TUAvaliacao {
+private:
+    //const string CODIGO_VALIDO = ;
+    //const static int NOTA_VALIDA = 3;
+    const string DESCRICAO_VALIDA = "Muito legal";
+    Avaliacao *avaliacao;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+public:
+    const static int SUCESSO = 1;
+    const static int FALHA = 0;
+    int run();
+};
+
+class TUSessao {
+    //const string CODIGO_VALIDO = ;
+    const string DATA_VALIDA = "11-Mar-2022";
+    const string HORARIO_VALIDO = "15:45";
+    const string IDIOMA_VALIDO = "Portugues";
+    Sessao *sessao;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+public:
+    const static int SUCESSO = 1;
+    const static int FALHA = 0;
+    int run();
+};
+
+class TUExcursao {
+    //const string CODIGO_VALIDO = ;
+    const string TITULO_VALIDO = "O Passeio";
+    //const static int NOTA_VALIDA = 2;
+    const string CIDADE_VALIDA = "Paris";
+    const static int DURACAO_VALIDA = 60;
+    const string DESCRICAO_VALIDA = "Muito legal.";
+    const string ENDERECO_VALIDO = "Impossivel saber";
+    Excursao *excursao;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+public:
+    const static int SUCESSO = 1;
+    const static int FALHA = 0;
+    int run();
+};
+
 
 #endif //PROJETO_TRABALHO_1_TESTES_H

@@ -164,5 +164,40 @@ int main() {
 
 //---------------------------
 
+    TUUsuario testeUsuario;
+
+    switch(testeUsuario.run()) {
+        case TUUsuario::SUCESSO: cout << "SUCESSO - USUARIO" << endl;
+            break;
+        case TUUsuario::FALHA  : cout << "FALHA   - USUARIO" << endl;
+            break;
+    }
+
+    TUAvaliacao testeAvaliacao;
+
+    switch(testeAvaliacao.run()) {
+        case TUAvaliacao::SUCESSO: cout << "SUCESSO - AVALIACAO" << endl;
+            break;
+        case TUAvaliacao::FALHA  : cout << "FALHA   - AVALIACAO" << endl;
+            break;
+    }
+
+    TUSessao testeSessao;
+
+    switch(testeSessao.run()) {
+        case TUSessao::SUCESSO: cout << "SUCESSO - SESSAO" << endl;
+            break;
+        case TUSessao::FALHA  : cout << "FALHA   - SESSAO" << endl;
+            break;
+    }
+
+    TUExcursao testeExcursao;
+
+    switch(testeExcursao.run()) {
+        case TUExcursao::SUCESSO: cout << "SUCESSO - EXCURSAO" << endl;
+            break;
+        case TUExcursao::FALHA  : cout << "FALHA   - EXCURSAO" << endl;
+            break;
+    }
 }
 
