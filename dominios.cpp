@@ -19,7 +19,7 @@ bool Duracao::validar(int valorDuracao) {  //200073303
     return valido;
 }
 
-void Duracao::setDuracao(int valorDuracao) {  //200073303
+void Duracao::setValor(int valorDuracao) {  //200073303
     if (validar(valorDuracao)) {
         this->valorDuracao=valorDuracao;
     }
@@ -44,7 +44,7 @@ bool Endereco::validar(string valorEndereco) {  //200073303
     return valido;
 }
 
-void Endereco::setEndereco(string valorEndereco) {  //200073303
+void Endereco::setValor(string valorEndereco) {  //200073303
     if (validar(valorEndereco)) {
         this->valorEndereco=valorEndereco;
     }
@@ -69,7 +69,7 @@ bool Descricao::validar(string valorDescricao) {  //200073303
     return valido;
 }
 
-void Descricao::setDescricao(string valorDescricao) {  //200073303
+void Descricao::setValor(string valorDescricao) {  //200073303
     if (validar(valorDescricao)) {
         this->valorDescricao=valorDescricao;
     }
@@ -101,7 +101,7 @@ bool Titulo::validar(string valorTitulo) {  //200073303
     return valido;
 }
 
-void Titulo::setTitulo(string valorTitulo) {  //200073303
+void Titulo::setValor(string valorTitulo) {  //200073303
     if (validar(valorTitulo)) {
         this->valorTitulo=valorTitulo;
     }
@@ -140,7 +140,7 @@ bool Horario::validar(string valorHorario) {  //200073303
 
 }
 
-void Horario::setHorario(string valorHorario) {  //200073303
+void Horario::setValor(string valorHorario) {  //200073303
     if (validar(valorHorario)) {
         this->valorHorario = valorHorario;
     }
@@ -202,7 +202,7 @@ bool Data::validar(string valorData) {  //200073303
     return valido;
 }
 
-void Data::setData(string valorData) {  //200073303
+void Data::setValor(string valorData) {  //200073303
     if (validar(valorData)) {
         this->valorData = valorData;
     }
@@ -326,8 +326,9 @@ void Nota::validar(int nota) {   //200062743
 void Nota::setValor(int nota) {   //200062743
     validar(nota);
     numeroNotas+=1;
-    this->nota = (nota + (this->nota * (numeroNotas - 1)))/numeroNotas;
+    this->nota = ((float)nota + (this->nota * (((float)numeroNotas) - 1)))/((float)numeroNotas);
 }
+
 
 //------------------------------------------------------------------------------
 
@@ -378,6 +379,8 @@ void Email::setValor(string email) {   //200062743
 
 //--------------------------------------------------------------------
 
+string Codigo::codigosExistentes[] = {};
+
 bool Codigo::verificar(string codigo) {
     for (const string &c : Codigo::codigosExistentes){
         if (codigo == c) {
@@ -411,4 +414,6 @@ void Codigo::setValor() {
 Codigo::Codigo() {
     setValor();
 }
+
+int Codigo::semente = 1;
 

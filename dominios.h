@@ -41,11 +41,11 @@ class Duracao {  //200073303
         int valorDuracao;
         bool validar(int);
     public:
-        void setDuracao(int);
-        int getDuracao() const;
+        void setValor(int);
+        int getValor() const;
 };
 
-inline int Duracao::getDuracao() const {  //200073303
+inline int Duracao::getValor() const {  //200073303
     return valorDuracao;
 }
 
@@ -56,11 +56,11 @@ class Endereco {  //200073303
         string valorEndereco;
         bool validar(string);
     public:
-        void setEndereco(string);
-        string getEndereco() const;
+        void setValor(string);
+        string getValor() const;
 };
 
-inline string Endereco::getEndereco() const {  //200073303
+inline string Endereco::getValor() const {  //200073303
     return valorEndereco;
 }
 
@@ -71,11 +71,11 @@ private:
     string valorDescricao;
     bool validar(string);
 public:
-    void setDescricao(string);
-    string getDescricao() const;
+    void setValor(string);
+    string getValor() const;
 };
 
-inline string Descricao::getDescricao() const {  //200073303
+inline string Descricao::getValor() const {  //200073303
     return valorDescricao;
 }
 
@@ -86,11 +86,11 @@ private:
     string valorTitulo;
     bool validar(string);
 public:
-    void setTitulo(string);
-    string getTitulo() const;
+    void setValor(string);
+    string getValor() const;
 };
 
-inline string Titulo::getTitulo() const {  //200073303
+inline string Titulo::getValor() const {  //200073303
     return valorTitulo;
 }
 
@@ -103,11 +103,11 @@ private:
     string valorHorario;
     bool validar(string);
 public:
-    void setHorario(string);
-    string getHorario() const;
+    void setValor(string);
+    string getValor() const;
 };
 
-inline string Horario::getHorario() const {  //200073303
+inline string Horario::getValor() const {  //200073303
     return valorHorario;
 }
 
@@ -134,11 +134,11 @@ private:
     string valorData;
     bool validar(string);
 public:
-    void setData(string);
-    string getData() const;
+    void setValor(string);
+    string getValor() const;
 };
 
-inline string Data::getData() const {  //200073303
+inline string Data::getValor() const {  //200073303
     return valorData;
 }
 
@@ -215,11 +215,8 @@ inline string Nome::getValor() const {   //200062743
 
 class Nota {   //200062743
 private:
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wc++17-extensions"
-    inline static float nota = 0;
-#pragma clang diagnostic pop
-    inline static float numeroNotas = 0;
+    float nota = 0;
+    int numeroNotas = 0;
     void validar(int);
 public:
     void setValor(int);
@@ -248,7 +245,7 @@ class Codigo {
 private:
     string codigo;
     static int semente;
-    inline static string codigosExistentes[100] = {};
+    static string codigosExistentes[100];
     bool verificar(string);
 public:
     Codigo();
@@ -260,7 +257,5 @@ public:
 inline string Codigo::getValor() const {
     return codigo;
 }
-
-inline int Codigo::semente = 1;
 
 #endif //PROJETO_TRABALHO_1_DOMINIOS_H

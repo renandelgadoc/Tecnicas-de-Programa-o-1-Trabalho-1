@@ -15,8 +15,8 @@ void TUDuracao::tearDown() {
 
 void TUDuracao::testarCenarioSucesso() {
     try {
-        duracao->setDuracao(DURACAO_VALIDA);
-        if (duracao->getDuracao() != DURACAO_VALIDA) {
+        duracao->setValor(DURACAO_VALIDA);
+        if (duracao->getValor() != DURACAO_VALIDA) {
             estado = FALHA;
         }
 
@@ -28,11 +28,11 @@ void TUDuracao::testarCenarioSucesso() {
 
 void TUDuracao::testarCenarioFalha() {
     try {
-        duracao->setDuracao(DURACAO_INVALIDA);
+        duracao->setValor(DURACAO_INVALIDA);
         estado = FALHA;
     }
     catch(invalid_argument &excecao) {
-        if (duracao->getDuracao() == DURACAO_INVALIDA) {
+        if (duracao->getValor() == DURACAO_INVALIDA) {
             estado = FALHA;
         }
     }
@@ -57,8 +57,8 @@ void TUEndereco::tearDown() {
 
 void TUEndereco::testarCenarioSucesso() {
     try {
-        endereco->setEndereco(ENDERECO_VALIDO);
-        if (endereco->getEndereco() != ENDERECO_VALIDO) {
+        endereco->setValor(ENDERECO_VALIDO);
+        if (endereco->getValor() != ENDERECO_VALIDO) {
             estado = FALHA;
         }
 
@@ -70,11 +70,11 @@ void TUEndereco::testarCenarioSucesso() {
 
 void TUEndereco::testarCenarioFalha1() {
     try {
-        endereco->setEndereco(ENDERECO_INVALIDO1);
+        endereco->setValor(ENDERECO_INVALIDO1);
         estado = FALHA;
     }
     catch(invalid_argument &excecao) {
-        if (endereco->getEndereco() == ENDERECO_INVALIDO1) {
+        if (endereco->getValor() == ENDERECO_INVALIDO1) {
             estado = FALHA;
         }
     }
@@ -82,11 +82,11 @@ void TUEndereco::testarCenarioFalha1() {
 
 void TUEndereco::testarCenarioFalha2() {
     try {
-        endereco->setEndereco(ENDERECO_INVALIDO2);
+        endereco->setValor(ENDERECO_INVALIDO2);
         estado = FALHA;
     }
     catch(invalid_argument &excecao) {
-        if (endereco->getEndereco() == ENDERECO_INVALIDO2) {
+        if (endereco->getValor() == ENDERECO_INVALIDO2) {
             estado = FALHA;
         }
     }
@@ -94,11 +94,11 @@ void TUEndereco::testarCenarioFalha2() {
 
 void TUEndereco::testarCenarioFalha3() {
     try {
-        endereco->setEndereco(ENDERECO_INVALIDO3);
+        endereco->setValor(ENDERECO_INVALIDO3);
         estado = FALHA;
     }
     catch(invalid_argument &excecao) {
-        if (endereco->getEndereco() == ENDERECO_INVALIDO3) {
+        if (endereco->getValor() == ENDERECO_INVALIDO3) {
             estado = FALHA;
         }
     }
@@ -125,8 +125,8 @@ void TUDescricao::tearDown() {
 
 void TUDescricao::testarCenarioSucesso() {
     try {
-        descricao->setDescricao(DESCRICAO_VALIDA);
-        if (descricao->getDescricao() != DESCRICAO_VALIDA) {
+        descricao->setValor(DESCRICAO_VALIDA);
+        if (descricao->getValor() != DESCRICAO_VALIDA) {
             estado = FALHA;
         }
 
@@ -138,11 +138,11 @@ void TUDescricao::testarCenarioSucesso() {
 
 void TUDescricao::testarCenarioFalha1() {
     try {
-        descricao->setDescricao(DESCRICAO_INVALIDA1);
+        descricao->setValor(DESCRICAO_INVALIDA1);
         estado = FALHA;
     }
     catch(invalid_argument &excecao) {
-        if (descricao->getDescricao() == DESCRICAO_INVALIDA1) {
+        if (descricao->getValor() == DESCRICAO_INVALIDA1) {
             estado = FALHA;
         }
     }
@@ -150,11 +150,11 @@ void TUDescricao::testarCenarioFalha1() {
 
 void TUDescricao::testarCenarioFalha2() {
     try {
-        descricao->setDescricao(DESCRICAO_INVALIDA2);
+        descricao->setValor(DESCRICAO_INVALIDA2);
         estado = FALHA;
     }
     catch(invalid_argument &excecao) {
-        if (descricao->getDescricao() == DESCRICAO_INVALIDA2) {
+        if (descricao->getValor() == DESCRICAO_INVALIDA2) {
             estado = FALHA;
         }
     }
@@ -162,11 +162,11 @@ void TUDescricao::testarCenarioFalha2() {
 
 void TUDescricao::testarCenarioFalha3() {
     try {
-        descricao->setDescricao(DESCRICAO_INVALIDA3);
+        descricao->setValor(DESCRICAO_INVALIDA3);
         estado = FALHA;
     }
     catch(invalid_argument &excecao) {
-        if (descricao->getDescricao() == DESCRICAO_INVALIDA3) {
+        if (descricao->getValor() == DESCRICAO_INVALIDA3) {
             estado = FALHA;
         }
     }
@@ -193,8 +193,8 @@ void TUTitulo::tearDown() {
 
 void TUTitulo::testarCenarioSucesso() {
     try {
-        titulo->setTitulo(TITULO_VALIDO);
-        if (titulo->getTitulo() != TITULO_VALIDO) {
+        titulo->setValor(TITULO_VALIDO);
+        if (titulo->getValor() != TITULO_VALIDO) {
             estado = FALHA;
         }
 
@@ -206,11 +206,11 @@ void TUTitulo::testarCenarioSucesso() {
 
 void TUTitulo::testarCenarioFalha1() {
     try {
-        titulo->setTitulo(TITULO_INVALIDO1);
+        titulo->setValor(TITULO_INVALIDO1);
         estado = FALHA;
     }
     catch(invalid_argument &excecao) {
-        if (titulo->getTitulo() == TITULO_INVALIDO1) {
+        if (titulo->getValor() == TITULO_INVALIDO1) {
             estado = FALHA;
         }
     }
@@ -218,11 +218,11 @@ void TUTitulo::testarCenarioFalha1() {
 
 void TUTitulo::testarCenarioFalha2() {
     try {
-        titulo->setTitulo(TITULO_INVALIDO2);
+        titulo->setValor(TITULO_INVALIDO2);
         estado = FALHA;
     }
     catch(invalid_argument &excecao) {
-        if (titulo->getTitulo() == TITULO_INVALIDO2) {
+        if (titulo->getValor() == TITULO_INVALIDO2) {
             estado = FALHA;
         }
     }
@@ -230,11 +230,11 @@ void TUTitulo::testarCenarioFalha2() {
 
 void TUTitulo::testarCenarioFalha3() {
     try {
-        titulo->setTitulo(TITULO_INVALIDO3);
+        titulo->setValor(TITULO_INVALIDO3);
         estado = FALHA;
     }
     catch(invalid_argument &excecao) {
-        if (titulo->getTitulo() == TITULO_INVALIDO3) {
+        if (titulo->getValor() == TITULO_INVALIDO3) {
             estado = FALHA;
         }
     }
@@ -242,11 +242,11 @@ void TUTitulo::testarCenarioFalha3() {
 
 void TUTitulo::testarCenarioFalha4() {
     try {
-        titulo->setTitulo(TITULO_INVALIDO4);
+        titulo->setValor(TITULO_INVALIDO4);
         estado = FALHA;
     }
     catch(invalid_argument &excecao) {
-        if (titulo->getTitulo() == TITULO_INVALIDO4) {
+        if (titulo->getValor() == TITULO_INVALIDO4) {
             estado = FALHA;
         }
     }
@@ -254,11 +254,11 @@ void TUTitulo::testarCenarioFalha4() {
 
 void TUTitulo::testarCenarioFalha5() {
     try {
-        titulo->setTitulo(TITULO_INVALIDO5);
+        titulo->setValor(TITULO_INVALIDO5);
         estado = FALHA;
     }
     catch(invalid_argument &excecao) {
-        if (titulo->getTitulo() == TITULO_INVALIDO5) {
+        if (titulo->getValor() == TITULO_INVALIDO5) {
             estado = FALHA;
         }
     }
@@ -287,8 +287,8 @@ void TUHorario::tearDown() {
 
 void TUHorario::testarCenarioSucesso() {
     try {
-        horario->setHorario(HORARIO_VALIDO);
-        if (horario->getHorario() != HORARIO_VALIDO) {
+        horario->setValor(HORARIO_VALIDO);
+        if (horario->getValor() != HORARIO_VALIDO) {
             estado = FALHA;
         }
 
@@ -300,11 +300,11 @@ void TUHorario::testarCenarioSucesso() {
 
 void TUHorario::testarCenarioFalha1() {
     try {
-        horario->setHorario(HORARIO_INVALIDO1);
+        horario->setValor(HORARIO_INVALIDO1);
         estado = FALHA;
     }
     catch(invalid_argument &excecao) {
-        if (horario->getHorario() == HORARIO_INVALIDO1) {
+        if (horario->getValor() == HORARIO_INVALIDO1) {
             estado = FALHA;
         }
     }
@@ -312,11 +312,11 @@ void TUHorario::testarCenarioFalha1() {
 
 void TUHorario::testarCenarioFalha2() {
     try {
-        horario->setHorario(HORARIO_INVALIDO2);
+        horario->setValor(HORARIO_INVALIDO2);
         estado = FALHA;
     }
     catch(invalid_argument &excecao) {
-        if (horario->getHorario() == HORARIO_INVALIDO2) {
+        if (horario->getValor() == HORARIO_INVALIDO2) {
             estado = FALHA;
         }
     }
@@ -343,8 +343,8 @@ void TUData::tearDown() {
 
 void TUData::testarCenarioSucesso1() {
     try {
-        data->setData(DATA_VALIDA1);
-        if (data->getData() != DATA_VALIDA1) {
+        data->setValor(DATA_VALIDA1);
+        if (data->getValor() != DATA_VALIDA1) {
             estado = FALHA;
         }
 
@@ -356,8 +356,8 @@ void TUData::testarCenarioSucesso1() {
 
 void TUData::testarCenarioSucesso2() {
     try {
-        data->setData(DATA_VALIDA2);
-        if (data->getData() != DATA_VALIDA2) {
+        data->setValor(DATA_VALIDA2);
+        if (data->getValor() != DATA_VALIDA2) {
             estado = FALHA;
         }
 
@@ -369,11 +369,11 @@ void TUData::testarCenarioSucesso2() {
 
 void TUData::testarCenarioFalha1() {
     try {
-        data->setData(DATA_INVALIDA1);
+        data->setValor(DATA_INVALIDA1);
         estado = FALHA;
     }
     catch(invalid_argument &excecao) {
-        if (data->getData() == DATA_INVALIDA1) {
+        if (data->getValor() == DATA_INVALIDA1) {
             estado = FALHA;
         }
     }
@@ -381,11 +381,11 @@ void TUData::testarCenarioFalha1() {
 
 void TUData::testarCenarioFalha2() {
     try {
-        data->setData(DATA_INVALIDA2);
+        data->setValor(DATA_INVALIDA2);
         estado = FALHA;
     }
     catch(invalid_argument &excecao) {
-        if (data->getData() == DATA_INVALIDA2) {
+        if (data->getValor() == DATA_INVALIDA2) {
             estado = FALHA;
         }
     }
@@ -393,11 +393,11 @@ void TUData::testarCenarioFalha2() {
 
 void TUData::testarCenarioFalha3() {
     try {
-        data->setData(DATA_INVALIDA3);
+        data->setValor(DATA_INVALIDA3);
         estado = FALHA;
     }
     catch(invalid_argument &excecao) {
-        if (data->getData() == DATA_INVALIDA3) {
+        if (data->getValor() == DATA_INVALIDA3) {
             estado = FALHA;
         }
     }
@@ -405,11 +405,11 @@ void TUData::testarCenarioFalha3() {
 
 void TUData::testarCenarioFalha4() {
     try {
-        data->setData(DATA_INVALIDA4);
+        data->setValor(DATA_INVALIDA4);
         estado = FALHA;
     }
     catch(invalid_argument &excecao) {
-        if (data->getData() == DATA_INVALIDA4) {
+        if (data->getValor() == DATA_INVALIDA4) {
             estado = FALHA;
         }
     }
@@ -726,30 +726,14 @@ void TUNota::tearDown(){
     delete nota;
 }
 
-void TUNota::testarCenarioSucesso1(){
+void TUNota::testarCenarioSucesso(){
     try{
         nota->setValor(VALOR_VALIDO1);
         if (nota->getValor() != VALOR_VALIDO1)
             estado = FALHA;
-    }
-    catch(invalid_argument &excecao){
-        estado = FALHA;
-    }
-}
-
-void TUNota::testarCenarioSucesso2(){
-    try{
         nota->setValor(VALOR_VALIDO2);
         if (nota->getValor() != ((VALOR_VALIDO2F + VALOR_VALIDO1F)/2))
             estado = FALHA;
-    }
-    catch(invalid_argument &excecao){
-        estado = FALHA;
-    }
-}
-
-void TUNota::testarCenarioSucesso3(){
-    try{
         nota->setValor(VALOR_VALIDO3);
         if (nota->getValor() != ((VALOR_VALIDO2F + VALOR_VALIDO1F + VALOR_VALIDO3F)/3))
             estado = FALHA;
@@ -783,9 +767,7 @@ void TUNota::testarCenarioFalha2(){
 
 int TUNota::run(){
     setUp();
-    testarCenarioSucesso1();
-    testarCenarioSucesso2();
-    testarCenarioSucesso3();
+    testarCenarioSucesso();
     testarCenarioFalha1();
     testarCenarioFalha2();
     tearDown();
@@ -972,17 +954,17 @@ void TUAvaliacao::testarCenarioSucesso() {
     //    estado = FALHA;
     //}
 
-    //Nota nota;
-    //nota.setValor(NOTA_VALIDA);
-    //avaliacao->setNota(nota);
-    //if (avaliacao->getNota().getValor() != NOTA_VALIDA) {
-    //    estado = FALHA;
-    //}
+    Nota nota;
+    nota.setValor(NOTA_VALIDA);
+    avaliacao->setNota(nota);
+    if (avaliacao->getNota().getValor() != NOTA_VALIDA) {
+        estado = FALHA;
+    }
 
     Descricao descricao;
-    descricao.setDescricao(DESCRICAO_VALIDA);
+    descricao.setValor(DESCRICAO_VALIDA);
     avaliacao->setDescricao(descricao);
-    if (avaliacao->getDescricao().getDescricao() != DESCRICAO_VALIDA) {
+    if (avaliacao->getDescricao().getValor() != DESCRICAO_VALIDA) {
         estado = FALHA;
     }
 }
@@ -1005,16 +987,16 @@ void TUSessao::tearDown() {
 
 void TUSessao::testarCenarioSucesso() {
     Data data;
-    data.setData(DATA_VALIDA);
+    data.setValor(DATA_VALIDA);
     sessao->setData(data);
-    if (sessao->getData().getData() != DATA_VALIDA) {
+    if (sessao->getData().getValor() != DATA_VALIDA) {
         estado = FALHA;
     }
 
     Horario horario;
-    horario.setHorario(HORARIO_VALIDO);
+    horario.setValor(HORARIO_VALIDO);
     sessao->setHorario(horario);
-    if (sessao->getHorario().getHorario() != HORARIO_VALIDO) {
+    if (sessao->getHorario().getValor() != HORARIO_VALIDO) {
         estado = FALHA;
     }
 
@@ -1051,18 +1033,18 @@ void TUExcursao::testarCenarioSucesso() {
     //}
 
     Titulo titulo;
-    titulo.setTitulo(TITULO_VALIDO);
+    titulo.setValor(TITULO_VALIDO);
     excursao->setTitulo(titulo);
-    if (excursao->getTitulo().getTitulo() != TITULO_VALIDO) {
+    if (excursao->getTitulo().getValor() != TITULO_VALIDO) {
         estado = FALHA;
     }
 
-    //Nota nota;
-    //nota.setValor(NOTA_VALIDA);
-    //avaliacao->setNota(nota);
-    //if (avaliacao->getNota().getValor() != NOTA_VALIDA) {
-    //    estado = FALHA;
-    //}
+    Nota nota;
+    nota.setValor(NOTA_VALIDA);
+    excursao->setNota(nota);
+    if (excursao->getNota().getValor() != NOTA_VALIDA) {
+        estado = FALHA;
+    }
 
     Cidade cidade;
     cidade.setValor(CIDADE_VALIDA);
@@ -1072,23 +1054,23 @@ void TUExcursao::testarCenarioSucesso() {
     }
 
     Duracao duracao;
-    duracao.setDuracao(DURACAO_VALIDA);
+    duracao.setValor(DURACAO_VALIDA);
     excursao->setDuracao(duracao);
-    if (excursao->getDuracao().getDuracao() != DURACAO_VALIDA) {
+    if (excursao->getDuracao().getValor() != DURACAO_VALIDA) {
         estado = FALHA;
     }
 
     Descricao descricao;
-    descricao.setDescricao(DESCRICAO_VALIDA);
+    descricao.setValor(DESCRICAO_VALIDA);
     excursao->setDescricao(descricao);
-    if (excursao->getDescricao().getDescricao() != DESCRICAO_VALIDA) {
+    if (excursao->getDescricao().getValor() != DESCRICAO_VALIDA) {
         estado = FALHA;
     }
 
     Endereco endereco;
-    endereco.setEndereco(ENDERECO_VALIDO);
+    endereco.setValor(ENDERECO_VALIDO);
     excursao->setEndereco(endereco);
-    if (excursao->getEndereco().getEndereco() != ENDERECO_VALIDO) {
+    if (excursao->getEndereco().getValor() != ENDERECO_VALIDO) {
         estado = FALHA;
     }
 }

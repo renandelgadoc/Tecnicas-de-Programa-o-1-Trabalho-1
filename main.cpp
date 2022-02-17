@@ -111,7 +111,7 @@ int main() {
 
     TUIdioma testeB;
 
-    switch(testeA.run()){
+    switch(testeB.run()){
         case TUCidade::SUCESSO: cout << "SUCESSO - IDIOMA" << endl;
             break;
         case TUCidade::FALHA  : cout << "FALHA   - IDIOMA" << endl;
@@ -142,9 +142,9 @@ int main() {
 
 //-------------------------------------------------------------------------
 
-    TUNota testeE;
+    TUNota testeNota;
 
-    switch(testeE.run()){
+    switch(testeNota.run()){
         case TUCidade::SUCESSO: cout << "SUCESSO - NOTA" << endl;
             break;
         case TUCidade::FALHA  : cout << "FALHA   - NOTA" << endl;
