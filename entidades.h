@@ -32,7 +32,13 @@ inline Dominio Entidade::getnomeAtributo() const{
 }
 
 ----------------------------------------------------------------------- */
-
+//
+// Padrão para representação de Usuário
+// Regras de formato para ser válido:
+// - Ter um nome válido
+// - Ter um email válido
+// - Ter uma senha válida
+//
 class Usuario {
 private:
     Nome nome;
@@ -70,7 +76,13 @@ inline void Usuario::setSenha(const Senha& senha) {
 inline Senha Usuario::getSenha() const {
     return senha;
 }
-
+//
+// Padrão para representação de Avaliação
+// Regras de formato para ser válido:
+// - Ter um código válido
+// - Ter uma nota válida
+// - Ter uma descrição válida
+//
 class Avaliacao {
 private:
     //Codigo codigo;
@@ -108,7 +120,14 @@ inline void Avaliacao::setDescricao(const Descricao& descricao) {
 inline Descricao Avaliacao::getDescricao() const {
     return descricao;
 }
-
+//
+// Padrão para representação de Sessão
+// Regras de formato para ser válido:
+// - Ter um código válido
+// - Ter uma data válida
+// - Ter um horário válido
+// - Ter um idioma válido
+//
 class Sessao {
 private:
     //Codigo codigo;
@@ -149,7 +168,16 @@ inline void Sessao::setIdioma(const Idioma& idioma) {
 inline Idioma Sessao::getIdioma() const {
     return idioma;
 }
-
+//
+// Padrão para representação de Excursão
+// Regras de formato para ser válido:
+// - Ter um código válido
+// - Ter um título válido
+// - Ter uma cidade válida
+// - Ter uma duração válida
+// - Ter uma descrição válida
+// - Ter um endereço válido
+//
 class Excursao {
 private:
     //Codigo codigo;
