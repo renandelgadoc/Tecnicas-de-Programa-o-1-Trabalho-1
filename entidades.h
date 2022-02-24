@@ -32,13 +32,14 @@ inline Dominio Entidade::getnomeAtributo() const{
 }
 
 ----------------------------------------------------------------------- */
-//
-// Padrão para representação de Usuário
-// Regras de formato para ser válido:
-// - Ter um nome válido
-// - Ter um email válido
-// - Ter uma senha válida
-//
+///
+/// Padrão para representação de Usuário
+///
+/// Regras de formato para ser válido:
+/// - Ter um nome válido
+/// - Ter um email válido
+/// - Ter uma senha válida
+///
 class Usuario {
 private:
     Nome nome;
@@ -76,34 +77,35 @@ inline void Usuario::setSenha(const Senha& senha) {
 inline Senha Usuario::getSenha() const {
     return senha;
 }
-//
-// Padrão para representação de Avaliação
-// Regras de formato para ser válido:
-// - Ter um código válido
-// - Ter uma nota válida
-// - Ter uma descrição válida
-//
+///
+/// Padrão para representação de Avaliação
+///
+/// Regras de formato para ser válido:
+/// - Ter um código válido
+/// - Ter uma nota válida
+/// - Ter uma descrição válida
+///
 class Avaliacao {
 private:
-    //Codigo codigo;
+    Codigo codigo;
     Nota nota;
     Descricao descricao;
 public:
-    //void setCodigo(const Codigo&);
-    //Codigo getCodigo() const;
+    void setCodigo(const Codigo&);
+    Codigo getCodigo() const;
     void setNota(const Nota&);
     Nota getNota() const;
     void setDescricao(const Descricao&);
     Descricao getDescricao() const;
 };
 
-//inline void Avaliacao::setCodigo(const Codigo& codigo){
-//    this->codigo = codigo;
-//}
+inline void Avaliacao::setCodigo(const Codigo& codigo){
+    this->codigo = codigo;
+}
 
-//inline Codigo Avaliacao::getCodigo() const {
-//    return codigo;
-//}
+inline Codigo Avaliacao::getCodigo() const {
+   return codigo;
+}
 
 inline void Avaliacao::setNota(const Nota& nota) {
     this->nota = nota;
@@ -120,23 +122,24 @@ inline void Avaliacao::setDescricao(const Descricao& descricao) {
 inline Descricao Avaliacao::getDescricao() const {
     return descricao;
 }
-//
-// Padrão para representação de Sessão
-// Regras de formato para ser válido:
-// - Ter um código válido
-// - Ter uma data válida
-// - Ter um horário válido
-// - Ter um idioma válido
-//
+///
+/// Padrão para representação de Sessão
+///
+/// Regras de formato para ser válido:
+/// - Ter um código válido
+/// - Ter uma data válida
+/// - Ter um horário válido
+/// - Ter um idioma válido
+///
 class Sessao {
 private:
-    //Codigo codigo;
+    Codigo codigo;
     Data data;
     Horario horario;
     Idioma idioma;
 public:
-    //void setCodigo(const Codigo&);
-    //Codigo getCodigo() const;
+    void setCodigo(const Codigo&);
+    Codigo getCodigo() const;
     void setData(const Data&);
     Data getData() const;
     void setHorario(const Horario&);
@@ -168,19 +171,20 @@ inline void Sessao::setIdioma(const Idioma& idioma) {
 inline Idioma Sessao::getIdioma() const {
     return idioma;
 }
-//
-// Padrão para representação de Excursão
-// Regras de formato para ser válido:
-// - Ter um código válido
-// - Ter um título válido
-// - Ter uma cidade válida
-// - Ter uma duração válida
-// - Ter uma descrição válida
-// - Ter um endereço válido
-//
+///
+/// Padrão para representação de Excursão
+///
+/// Regras de formato para ser válido:
+/// - Ter um código válido
+/// - Ter um título válido
+/// - Ter uma cidade válida
+/// - Ter uma duração válida
+/// - Ter uma descrição válida
+/// - Ter um endereço válido
+///
 class Excursao {
 private:
-    //Codigo codigo;
+    Codigo codigo;
     Titulo titulo;
     Nota nota;
     Cidade cidade;
@@ -188,8 +192,8 @@ private:
     Descricao descricao;
     Endereco endereco;
 public:
-    //void setCodigo(const Codigo&);
-    //Codigo getCodigo() const;
+    void setCodigo(const Codigo&);
+    Codigo getCodigo() const;
     void setTitulo(const Titulo&);
     Titulo getTitulo() const;
     void setNota(const Nota&);
@@ -204,13 +208,13 @@ public:
     Endereco getEndereco() const;
 };
 
-//inline void Excursao::setCodigo(const Codigo& codigo){
-//    this->codigo = codigo;
-//}
+inline void Excursao::setCodigo(const Codigo& codigo){
+    this->codigo = codigo;
+}
 
-//inline Codigo Excursao::getCodigo() const {
-//    return codigo;
-//}
+inline Codigo Excursao::getCodigo() const {
+   return codigo;
+}
 
 inline void Excursao::setTitulo(const Titulo& titulo) {
     this->titulo = titulo;
